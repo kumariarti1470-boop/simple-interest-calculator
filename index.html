@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Interest Calculator</title>
+</head>
+<body>
+    <h1>Simple Interest Calculator</h1>
+
+    Amount: <input id="principal"> <br><br>
+    Rate: <input id="rate"> % <br><br>
+    Years: <input id="years"> <br><br>
+
+    <button onclick="compute()">Compute</button>
+
+    <p id="result"></p>
+
+    <script>
+        function compute() {
+            let p = document.getElementById("principal").value;
+            let r = document.getElementById("rate").value;
+            let y = document.getElementById("years").value;
+
+            let interest = p * r * y / 100;
+
+            document.getElementById("result").innerHTML =
+                "Interest = " + interest;
+        }
+    </script>
+</body>
+</html>
